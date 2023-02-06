@@ -59,7 +59,7 @@ class DateTime extends \DateTime
 	}
 
 
-	public function __wakeup()
+	public function __wakeup(): void
 	{
 		if (isset($this->fix, $this->fix[1])) {
 			$this->__construct($this->fix[0], new \DateTimeZone($this->fix[1]));
