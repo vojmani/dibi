@@ -108,7 +108,7 @@ class Result implements IDataSource
 	 * Required by the Countable interface.
 	 * @return int
 	 */
-	final public function count()
+	final public function count(): int
 	{
 		return $this->getResultDriver()->getRowCount();
 	}
@@ -128,7 +128,7 @@ class Result implements IDataSource
 	 * Required by the IteratorAggregate interface.
 	 * @return ResultIterator
 	 */
-	final public function getIterator()
+	final public function getIterator(): \Traversable
 	{
 		return new ResultIterator($this);
 	}
