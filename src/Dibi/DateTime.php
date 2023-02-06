@@ -46,7 +46,7 @@ class DateTime extends \DateTime
 	}
 
 
-	public function getTimestamp()
+	public function getTimestamp(): int
 	{
 		$ts = $this->format('U');
 		return is_float($tmp = $ts * 1) ? $ts : $tmp;
