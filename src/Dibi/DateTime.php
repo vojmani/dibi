@@ -38,7 +38,7 @@ class DateTime extends \DateTime
 	}
 
 
-	public function setTimestamp($timestamp)
+	public function setTimestamp(int $timestamp): \DateTime
 	{
 		$zone = $this->getTimezone();
 		$this->__construct('@' . $timestamp);
