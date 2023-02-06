@@ -385,7 +385,7 @@ class Fluent implements IDataSource
 	 * @param  int  limit
 	 * @return ResultIterator
 	 */
-	public function getIterator($offset = null, $limit = null)
+	public function getIterator($offset = null, $limit = null): \Traversable
 	{
 		return $this->query($this->_export(null, ['%ofs %lmt', $offset, $limit]))->getIterator();
 	}
