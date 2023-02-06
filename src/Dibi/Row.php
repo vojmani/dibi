@@ -11,6 +11,7 @@ namespace Dibi;
 /**
  * Result set single row.
  */
+#[\AllowDynamicProperties]
 class Row implements \ArrayAccess, \IteratorAggregate, \Countable
 {
 	public function __construct($arr)
